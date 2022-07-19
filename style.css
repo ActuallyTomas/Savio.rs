@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow: hidden;
+  font-family: sans-serif;
+  font-weight: 100;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  min-width: 900px;
+  
+}
+
+:root {
+    --color-one: #04a7bd;
+    --color-two: #a400ef;
+  }
+
+html .content, body .content {
+  text-align: center;
+  position: static;
+  top: 60%;
+  left: 0%;
+  font-style: bold;
+  white-space: nowrap;
+}
+html .content .random, body .content .random {
+  color: #eee;
+  opacity: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  white-space: nowrap;
+}
+
+
+.copyright{
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  color: #7F7F7F;
+  width: 35%;
+  font-size: 12px;
+  text-align: left;
+  padding-left: 24px;
+  white-space: nowrap;
+
+  font-family: sans-serif;
+  font-weight: 100;
+
+}
+
+.soon{
+  color: #eee;
+  opacity: 1;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.logo-small{
+  position: absolute;
+  left: 0;
+  bottom: 36px;
+  width: 50px;
+  padding-left: 24px;
+}
+.copyright a{
+  color: #7F7F7F;
+}
+
+html .social, body .social {
+  position: absolute;
+  right: 0;
+  transform: translateY(24px);
+  width: 35%;
+  text-align: center;
+}
+html .list-item, body .list-item {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding-right: 24px;
+  width: 110px;
+  text-align: right;
+}
+html .list-item .item-link, body .list-item .item-link {
+  font-size: 12px;
+  text-decoration: none;
+  color: #7F7F7F;
+  transition: 0.3s ease-out all;
+}
+html .list-item .item-link:focus, body .list-item .item-link:focus {
+  outline: none;
+}
+html .list-item .item-link:after, body .list-item .item-link:after {
+  content: "";
+  position: relative;
+  width: 0;
+  height: 1px;
+  display: block;
+  z-index: 100;
+  transition: 0.3s ease-out all;
+
+}
+html .list-item .item-link:hover, body .list-item .item-link:hover {
+  color: #eee;
+}
+html .list-item .item-link:hover:after, body .list-item .item-link:hover:after {
+  width: 50px;
+}
+
+.randomCharacter {
+  display: inline-block;
+  height: 10px;
+}
+
+logo-large {
+  bottom: 0px;
+  width: 600px;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  transform: translate( 50%, 0%)
+}
+
+.logo-large{
+  display: inline-block;
+
+  height: 70px;
+  bottom: 0px;
+}
+
+
+/*  Gradient Background    */
+
+
+.gradient {
+  display: grid;
+  grid-row: 1 / span 5;
+  grid-column: 1 / span 5;
+  z-index: -1000;
+}
+
+.gradient > div {
+grid-row: 1 / span 5;
+grid-column: 1 / span 5;
+
+background: linear-gradient(to right, var(--color-one), var(--color-two) 100%);
+background: linear-gradient(to right, var(--color-one), var(--color-two) 100%);
+}
+
+.gradient > div:nth-child(2) {
+background: linear-gradient(to right, var(--color-two), var(--color-one) 100%);
+background: linear-gradient(to right, var(--color-two), var(--color-one) 100%);
+-webkit-animation-name: animationOne;
+        animation-name: animationOne;
+-webkit-animation-duration: 4s;
+        animation-duration: 4s;
+-webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+-webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+
+.gradient > div:nth-child(3) {
+background: linear-gradient(to top, transparent, var(--color-one) 100%);
+-webkit-animation-name: animationTwo;
+        animation-name: animationTwo;
+-webkit-animation-duration: 8s;
+        animation-duration: 8s;
+-webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+-webkit-animation-timing-function: ease;
+        animation-timing-function: ease;
+-webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animationOne {
+0% {
+  opacity: 0;
+}
+
+50% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}    
+}
+
+@keyframes animationOne {
+0% {
+  opacity: 0;
+}
+50% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}    
+}
+
+@-webkit-keyframes animationTwo {
+0% {
+  opacity: 0;
+}
+50% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
+
+@keyframes animationTwo {
+0% {
+  opacity: 0;
+}
+50% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
